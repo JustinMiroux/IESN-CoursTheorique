@@ -22,7 +22,7 @@ lang: "fr"
 
 ## IPV4
 
-* ``ìp add 192.168.1.1 255.255.255.0`` = Configurer une IPV4 sur une interface
+* ```ip add 192.168.1.1 255.255.255.0``` = Configurer une IPV4 sur une interface
 
 ### Route statique
 
