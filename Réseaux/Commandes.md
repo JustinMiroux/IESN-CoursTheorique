@@ -28,3 +28,8 @@ lang: "fr"
 
 * ```ip route 192.168.1.0 255.255.255.0 192.168.1.193``` = Route récursive (1. l'addresse du réseaux 2. le mask du réseaux 3. Le routeur par lequelle il faut passer pour accéder au réseaux en question)
 * ```ip route 192.168.1.0 255.255.255.0 s0/1/0``` = Route directement connectée (1. l'addresse du réseaux 2. le mask du réseaux 3. Interface par laquelle il faut passer pour accéder au réseaux)
+
+### Route par défault
+
+* ```ip route 0.0.0.0 0.0.0.0 192.168.1.194``` = = Route récursive (1. l'addresse du réseaux 2. le mask du réseaux 3. Le routeur par lequelle il faut passer pour accéder au réseaux en question)
+* ```ip route 0.0.0.0 0.0.0.0 s0/1/0``` = Route directement connectée (1. l'addresse du réseaux 2. le mask du réseaux 3. Interface par laquelle il faut passer pour accéder au réseaux)
