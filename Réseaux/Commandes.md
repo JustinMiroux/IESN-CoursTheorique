@@ -51,3 +51,18 @@ lang: "fr"
 
 * ```ipv6 route ::/0 s0/1/0``` = Route directement connectée
 * ```ipv6 route ::/0 FC00::2``` = Route récursive
+
+## RIPV2
+
+* ``router rip`` = Entrez en mode configuration du rip
+* ``version 2`` = Specifier que l'on va utiliser la version 2 du protocol rip (par défault version 1)
+* ``network 192.168.1.194`` = Définir les interfaces (réseau) participant au RIP (ceux qui sont directement connecté a notre routeur)
+* ``network 192.168.1.0`` = Ajouter un autre réseau participant
+* ``passive-interface g0/0/0`` = Définir les interfaces qui ne sont pas en face d'un routeur, afin qu'on ne leur envois pas les infos de routage
+* ``no auto-summary`` = Désactive le résumer de route
+
+! Le réseau vers internet ne participe pas à notre routage RIP. Pour le routeur connecter a internet faire une route par défault sur l'interface.
+
+! Pour partager la route (a ne faire que sur le routeur qui a la route par défault):
+* ``router rip`` = Entrez en mode configuration du rip
+* ``default-information originate`` = propague la route au reste du réseau RIP
