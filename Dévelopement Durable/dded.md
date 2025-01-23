@@ -23,3 +23,7 @@ les plus poluant sont les moins touchés par les changements climatique
 Pour la présentation :
 - Idée
 - Evaluation impact (EMI)
+    Impact de premier ordre +&-
+    de seconds +&-
+    de troisième +&-
+    
