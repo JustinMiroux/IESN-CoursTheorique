@@ -52,6 +52,24 @@ lang: "fr"
 * ```ipv6 route ::/0 s0/1/0``` = Route directement connectée
 * ```ipv6 route ::/0 FC00::2``` = Route récursive
 
+## VLAN
+
+* ``vlan 10`` = Créer une vlan avec l'id 10
+* ``name VLAN10`` = Nomme la Vlan
+
+In interface configuration :
+* ``switchport mode access`` = Change le port en mode accès
+* ``switchport access vlan 10`` = Change l'accés a la vlan avec l'id 10
+
+Configuration de trunk (Entre switch L2 and L3):
+* ``switchport mode trunk`` = Change le port en mode trunk
+* ``switchport trunk allowed vlan 10,11``
+
+Configuration du routage inter VLAN (Entre routeur et switch L2):
+* ``int g0/0/0.10`` = Permet de configurer l'interface avec l'id vlan
+* ``encapsulation dot1q 10`` = Active l'encapsulation pour la vlan 10
+* ``ip add ...`` = Configuration interface (Voir IPV4)
+
 ## RIPV2
 
 * ``router rip`` = Entrez en mode configuration du rip
@@ -66,3 +84,9 @@ lang: "fr"
 ! Pour partager la route (a ne faire que sur le routeur qui a la route par défault):
 * ``router rip`` = Entrez en mode configuration du rip
 * ``default-information originate`` = propague la route au reste du réseau RIP
+
+## OSPF
+
+* ``router ospf 1`` = Active l'ospf version 1 pour le routeur
+* ``router-id 1.1.1.1`` = Definit un id pour le routeur (Unique par routeur)
+* ``network 10.10.10.0 0.0.0.255 area 0`` = Définit un réseaux pour l'ospf.
