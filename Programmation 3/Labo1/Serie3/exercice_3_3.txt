@@ -1,0 +1,85 @@
+Script started on 2024-09-25 10:51:08+02:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="112" LINES="28"]
+[?2004h]0;user@Asus-S16: ~[01;32muser@Asus-S16[00m:[01;34m~[00m$ python3
+[?2004l
+Python 3.10.12 (main, Sep 11 2024, 15:47:36) [GCC 11.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 
+[K>>> dico = {}
+>>> dico["computer"] = "ordianteur"[1Pnteur"[Cateur"[C[C[C[C[C
+>>> dico["mouse"] = "souris"
+>>> dico["keyboard"] = "clavier"
+>>> print [K(dico)
+{'computer': 'ordinateur', 'mouse': 'souris', 'keyboard': 'clavier'}
+>>> 
+>>> invent = {"pommes": 430, "bann[Kanes": 312, "oranges" [K: 274, "poires": 137}
+>>> print(invent)
+{'pommes': 430, 'bananes': 312, 'oranges': 274, 'poires': 137}
+>>> del invent["pommes"]
+>>> print(invent)
+{'bananes': 312, 'oranges': 274, 'poires': 137}
+>>> print(len(invent))
+3
+>>> if "pommes" in invent:
+[C[C[C[C[10Pprint('\n');
+[C[C[C[C    print("Pas de pommes")
+[C[C[C[Celse:[K
+... else:    print("Nous avons des pommes")
+[C[C[C[C[12Pif "pommes" in invent:
+[C[C[C[C[10Pprint('\n');
+[C[C[C[C    print("Pas de pommes")
+... 
+Pas de pommes
+>>> print('\n')
+
+
+>>> print(dico.keys())
+dict_keys(['computer', 'mouse', 'keyboard'])
+>>> for k in dico.keys():
+...     print("clé" ":"[C, k, ""[K ____[K[K[K[K[K ---- valeur[1P[C[C[C[C[C[C[C[C[C[C[C :", dico[k])
+... 
+clé : computer ---- valeur : ordinateur
+clé : mouse ---- valeur : souris
+clé : keyboard ---- valeur : clavier
+>>> for k in dico:
+...     for k in dico:
+[C[C[C[C    print("clé :", k, "---- valeur :", dico[k])
+... 
+clé : computer ---- valeur : ordinateur
+clé : mouse ---- valeur : souris
+clé : keyboard ---- valeur : clavier
+>>> for clef, valeur in dico.items():
+... print(
+[C[C[C[C    print([C[C[C[C[C[Cclef, valeur)
+... 
+computer ordinateur
+mouse souris
+keyboard clavier
+>>> print([K('\n')
+
+
+>>> print(list(dico.keys()))
+['computer', 'mouse', 'keyboard']
+>>> print(tuple(dico.keys()))
+('computer', 'mouse', 'keyboard')
+>>> (print([K[K[K[K[K[K[Kprint(dico.iy[Ktems())
+dict_items([('computer', 'ordinateur'), ('mouse', 'souris'), ('keyboard', 'clavier')])
+>>> print(list(dico.items()))
+[('computer', 'ordinateur'), ('mouse', 'souris'), ('keyboard', 'clavier')]
+>>> p[Kprint(list(dico.items()))
+[C[C[C[C[C[C[C[C[C[C[6Pdico.items())
+[C[C[C[C[C[C[C[C[C[Ctuple(dico.keys()))
+[C[C[C[C[C[C[C[C[C[C[1Plist(dico.keys()))
+[C[C[C[C[C[C[C[C[C[C'\n')[K
+
+
+>>> arb = {}
+>>> arb[(1, [K2)] = "peuplier"
+>>> arb[(3,4)] = "platane"
+>>> arb[6,5] = "platanier"[K[K[K[K[K[K[K[K[Kalmier"
+>>> r[Karb[5,1] = "cycas"
+>>> arb[7,3] = "sapin"
+>>> print(arb)
+{(1, 2): 'peuplier', (3, 4): 'platane', (6, 5): 'palmier', (5, 1): 'cycas', (7, 3): 'sapin'}
+>>> print(arb[(6,5)])
+palmier
+>>> exit()
